@@ -11,6 +11,15 @@ import WebKit
 class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
 
     var request: URLRequest!
+    
+    convenience init(url: String?){
+        self.init()
+        //https://promotion-dev.beichoo.com/beichoo_app/article/index.html
+        let urlStr = String.init("https://promotion-dev.beichoo.com/beichoo_app/article/index.html?user_id=&token=&article_id=wx-http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMjM5OTA1MDUyMA%3D%3D%26mid%3D2655440220%26idx%3D1%26sn%3Dfa2cab627c1540cdfe883eb4379d9a4c%26scene%3D0")
+        
+        self.request = URLRequest.init(url: URL.init(string: urlStr)!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(self.articleWeb)
@@ -25,9 +34,54 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
                                                                  action: #selector(itemClick))
 
     }
+    
+    override var canResignFirstResponder: Bool{
+        return false
+    }
+    
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if (action == #selector(point) || action == #selector(share)) {
+            return true
+        }
+        return false
+    }
+    
+    func Menu() -> Void {
+        let menu = UIMenuController.shared
+        let item = UIMenuItem.init(title: "划重点", action: #selector(point))
+        let shareItem = UIMenuItem.init(title: "分享", action: #selector(share))
+        
+        menu.menuItems = [item,shareItem]
+        menu.arrowDirection = .default
+        menu.setTargetRect(articleWeb.bounds, in: articleWeb)
+        menu.setMenuVisible(true, animated: true)
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 30 {
+            self.title = articleWeb.title
+        }else{
+            self.title = ""
+        }
+    }
+    
+    @objc func point() {
+        articleWeb.evaluateJavaScript("get_selection()", completionHandler: nil)
+    }
+    
+    @objc func share() {
+        articleWeb.evaluateJavaScript("get_selection_txt()", completionHandler: nil)
+    }
+    
     @objc func itemClick() {
         print("点击了")
     }
+    
     private lazy var articleWeb : WKWebView = {
         let webView = WKWebView.init(frame: view.bounds)
         webView.allowsBackForwardNavigationGestures = true
@@ -45,54 +99,6 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         return pp
     }()
     
-    convenience init(url: String?){
-        self.init()
-        //https://promotion-dev.beichoo.com/beichoo_app/article/index.html
-        let urlStr = String.init("https://promotion-dev.beichoo.com/beichoo_app/article/index.html?user_id=&token=&article_id=wx-http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMjM5OTA1MDUyMA%3D%3D%26mid%3D2655440220%26idx%3D1%26sn%3Dfa2cab627c1540cdfe883eb4379d9a4c%26scene%3D0")
-        
-        self.request = URLRequest.init(url: URL.init(string: urlStr)!)
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 30 {
-            self.title = articleWeb.title
-        }else{
-            self.title = ""
-        }
-    }
-    
-    func Menu() -> Void {
-        let menu = UIMenuController.shared
-        let item = UIMenuItem.init(title: "划重点", action: #selector(point))
-        let shareItem = UIMenuItem.init(title: "分享", action: #selector(share))
-        
-        menu.menuItems = [item,shareItem]
-        menu.arrowDirection = .default
-        menu.setTargetRect(articleWeb.bounds, in: articleWeb)
-        menu.setMenuVisible(true, animated: true)
-        
-    }
-    
-    override var canResignFirstResponder: Bool{
-        return false
-    }
-    
-    override var canBecomeFirstResponder: Bool{
-        return true
-    }
-
-    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if (action == #selector(point) || action == #selector(share)) {
-            return true
-        }
-        return false
-    }
-    @objc func point() {
-        articleWeb.evaluateJavaScript("get_selection()", completionHandler: nil)
-    }
-    
-    @objc func share() {
-        articleWeb.evaluateJavaScript("get_selection_txt()", completionHandler: nil)
-    }
     deinit {
         articleWeb.removeObserver(self, forKeyPath: "estimatedProgress")
     }
