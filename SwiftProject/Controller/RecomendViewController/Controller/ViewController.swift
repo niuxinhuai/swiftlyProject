@@ -8,8 +8,8 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import HandyJSON
+import SwiftyJSON
 //https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec
     class ViewController: BaseViewController {
         var jsonObject = JSON()
@@ -23,7 +23,7 @@ import HandyJSON
         }
         
         func DownLoadData() -> Void {
-            Alamofire.request("https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseJSON { (object ) in
+            Alamofire.request("https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 self.activity.stopAnimating()
                 switch object.result.isSuccess{
@@ -31,6 +31,7 @@ import HandyJSON
                     if let value = object.result.value{
                         let json = JSON(value)
                         self.jsonObject = json
+                      //  self.jsonObject = try! JSONDecoder().decode(ResponseData.self, from: value)
                         self.tableView.reloadData()
                     }
                 case false:
@@ -79,7 +80,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NSLog("我被点击了%ld", indexPath.row)
         let dic:Dictionary = self.jsonObject["data"]["item"].array![indexPath.row].dictionary!
         if dic["type"] == "article" {
             let url = dic["id"]?.string

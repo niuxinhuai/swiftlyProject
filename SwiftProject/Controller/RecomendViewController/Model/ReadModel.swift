@@ -8,8 +8,6 @@
 
 import UIKit
 import HandyJSON
-import Foundation
-
 struct items: HandyJSON {
     
     var source = String()
@@ -26,31 +24,15 @@ struct items: HandyJSON {
     
 }
 
-struct ReturnData: HandyJSON {
+struct ReturnData: Codable {
     var pageNum: Int = 0
     var pageMax: Int = 0
-    var item = Array<Dictionary<String, Any>>() //格式不固定，用范型替代
+   // var item: [items] //格式不固定，用范型替代
 }
 
-struct ResponseData<T: HandyJSON>: HandyJSON {
-    var code: Int = 0
-    var data = T()// 格式不固定，用范型替代
+struct ResponseData: Codable {
+    var code: String
+    var data: ReturnData
     
 
-}
-
-class BasicTypes: HandyJSON {
-    var source = String()
-    var tab: Int = 0
-    var me: Int = 0
-    var itemIdentifier = String()
-    var recommendNum: Int = 0
-    var title = String()
-    var brief = String()
-    var readNum: Int = 0
-    var cover = String()
-    var issuerNickname = String()
-    var type = String()
-    
-    required init() {}
 }

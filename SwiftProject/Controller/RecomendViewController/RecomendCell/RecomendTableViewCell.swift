@@ -15,6 +15,7 @@ class RecomendTableViewCell: BaseTableViewCell {
 
     var model: items?{
         didSet {
+            
             //guard let model = model else { return }
             bgImageView.sd_setImage(with: NSURL(string: (model?.cover)!)! as URL, placeholderImage: UIImage(named: "m8.jpg"))
             titleLabel.text = model?.title
