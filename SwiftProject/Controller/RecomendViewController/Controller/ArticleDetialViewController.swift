@@ -169,8 +169,6 @@ extension ArticleDetialViewController: WKUIDelegate,WKNavigationDelegate,SDPhoto
         photoBrowserd.sourceImagesContainerView = view
         photoBrowserd.delegate = self
         photoBrowserd.show()
-        
-        
     }
     
     func photoBrowser(_ browser: SDPhotoBrowserd!, highQualityImageURLFor index: Int) -> URL! {

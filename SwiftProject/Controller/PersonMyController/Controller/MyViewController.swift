@@ -7,26 +7,23 @@
 //
 
 import UIKit
-
+import HandyJSON
 class MyViewController: BaseViewController {
-    var data = ["我的动态","我的关注","我的粉丝","我的合集","我的订阅","我的消息"]
-
-
-
+    var data:Array = PersonModel.data
+    var imgNamedArray: Array = PersonModel.imgNamedArray
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.view.addSubview(self.tableView)
-        // Do any additional setup after loading the view.
+        view.addSubview(self.tableView)
     }
     
     lazy var tableView:UITableView = {
         let mainTable = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-49), style: UITableViewStyle.plain)
         mainTable.delegate = self;
         mainTable.dataSource = self;
-        mainTable.separatorStyle = .none
-        mainTable.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
+        //mainTable.separatorStyle = .none
+        mainTable.register(PersonUserTableViewCell.classForCoder(), forCellReuseIdentifier: "userCell")
+        mainTable.register(PersonMyTableViewCell.classForCoder(), forCellReuseIdentifier: "myCells")
+        mainTable.register(PersonTimeTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
         return mainTable
     }()
 
@@ -47,17 +44,20 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! PersonUserTableViewCell
+            return cell
+            
+        }
+
+        if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath) as! PersonMyTableViewCell
+            cell.imageNamed = String(imgNamedArray[indexPath.row])
+            cell.title = String(data[indexPath.row])
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier",
                                                  for: indexPath)
-        let label = UILabel()
-        label.backgroundColor = UIColor.lightGray
-        label.alpha = 0.2
-        label.frame = CGRect.init(x: 0, y: cell.frame.size.height-0.5, width: cell.frame.size.width, height: 0.5)
-        cell.addSubview(label)
-        
-        if indexPath.section == 2 {
-            cell.textLabel?.text = data[indexPath.row]
-        }
         
         return cell
     }
@@ -69,14 +69,18 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 80
+            return 96
         case 1:
-            return 80
+            return 90
         case 2:
             return 56
         default:
             return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("点击了\(indexPath.section)区\(indexPath.row)行")
     }
     
     

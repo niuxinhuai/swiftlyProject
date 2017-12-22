@@ -9,9 +9,9 @@
 import UIKit
 
 class SignTabbar: UITabBar {
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         for tabBarButton in subviews {
             if NSStringFromClass(tabBarButton.classForCoder) == "UITabBarButton"{
                 let ctr = tabBarButton as! UIControl
@@ -24,10 +24,11 @@ class SignTabbar: UITabBar {
     @objc func barButtonActin(sender:UIControl)  {
         for imageView in sender.subviews {
             if NSStringFromClass(imageView.classForCoder) == "UITabBarSwappableImageView"{
-               self.tabBarAnimationWithView(view: imageView)
+                self.tabBarAnimationWithView(view: imageView)
             }
         }
     }
+
     @objc func tabBarAnimationWithView(view:UIView){
         let scaleAnimation = CAKeyframeAnimation()
         scaleAnimation.keyPath = "transform.scale"
@@ -37,7 +38,6 @@ class SignTabbar: UITabBar {
         scaleAnimation.repeatCount = 1
         view.layer.add(scaleAnimation, forKey: "123")
     }
-
 }
 
 
