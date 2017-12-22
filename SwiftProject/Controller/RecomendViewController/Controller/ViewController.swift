@@ -22,6 +22,18 @@ import SwiftyJSON
             
         }
         
+        override func configNavgationItem() {
+            super.configNavgationItem()
+            navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "img_have_search")?.withRenderingMode(.alwaysOriginal),
+                                                                     style: UIBarButtonItemStyle.plain,
+                                                                     target: self,
+                                                                     action: #selector(didSelectRightBarButtonItem))
+        }
+        
+        @objc func didSelectRightBarButtonItem() {
+            
+        }
+        
         func DownLoadData() -> Void {
             Alamofire.request("https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -45,7 +57,8 @@ import SwiftyJSON
             if #available(iOS 11.0, *) {
                 //table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
             } else {
-                table.frame = CGRect.init(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-64-49)
+                table.frame = CGRect.init(x: 0, y: 64, width: UIScreen.main.bounds.size.width,
+                                          height: UIScreen.main.bounds.size.height-64-49)
                 // Fallback on earlier versions
             };
             table.delegate = self;
@@ -53,7 +66,8 @@ import SwiftyJSON
             table.estimatedRowHeight = 50;
             table.separatorStyle = .none
             table.rowHeight = UITableViewAutomaticDimension
-            table.register(RecomendTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
+            table.register(RecomendTableViewCell.classForCoder(),
+                           forCellReuseIdentifier: "cellIdentifier")
             self.view.addSubview(table)
             return table
         }()
@@ -83,9 +97,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         let dic:Dictionary = self.jsonObject["data"]["item"].array![indexPath.row].dictionary!
         if dic["type"] == "article" {
             let url = dic["id"]?.string
-            
             let vc = ArticleDetialViewController.init(url: url)
-            
             navigationController?.pushViewController(vc, animated: true)
         }
     }

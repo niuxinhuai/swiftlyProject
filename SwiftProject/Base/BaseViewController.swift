@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         self.configNav()
+        self.configNavgationItem()
 
 //        if #available(iOS 11.0, *) {
 //            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
@@ -29,6 +30,10 @@ class BaseViewController: UIViewController {
             return
         }
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Return")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backAction))
+    }
+    
+    func configNavgationItem() -> Void {
+        
     }
     
     @objc func backAction() {

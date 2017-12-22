@@ -28,6 +28,7 @@ class RecomendTableViewCell: BaseTableViewCell {
                 atricleTypeLabel.text = "合集"
                 atricleTypeLabel.backgroundColor = UIColor.hex(hexString: "#a2efec").withAlphaComponent(0.8)
             }
+            // stringWidth = (text! as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font:font], context: nil).size.width
             
             let labelHeight: CGFloat = titleLabel.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
             if labelHeight > 30 {

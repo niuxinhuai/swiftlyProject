@@ -30,12 +30,6 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         articleWeb.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         articleWeb.load(request)
         self.Menu()
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "message_pic")?.withRenderingMode(.alwaysOriginal),
-                                                                 style: .plain,
-                                                                 target: self,
-                                                                 action: #selector(itemClick))
-
     }
     
     override var canResignFirstResponder: Bool{
@@ -53,6 +47,14 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
             return true
         }
         return false
+    }
+    
+    override func configNavgationItem() {
+        super.configNavgationItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "message_pic")?.withRenderingMode(.alwaysOriginal),
+                                                                 style: UIBarButtonItemStyle.plain,
+                                                                 target: self,
+                                                                 action: #selector(didSelectRightBarButtonItem))
     }
     
     func Menu() -> Void {
@@ -76,6 +78,10 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         }
     }
     
+    @objc func didSelectRightBarButtonItem() {
+        
+    }
+    
     @objc func point() {
         articleWeb.evaluateJavaScript("get_selection()", completionHandler: nil)
     }
@@ -88,10 +94,6 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         articleWeb.evaluateJavaScript("window.getSelection().toString()") { (object, error) in
             print(object!)
         }
-    }
-    
-    @objc func itemClick() {
-        print("点击了")
     }
     
     private lazy var articleWeb : WKWebView = {
@@ -144,9 +146,7 @@ extension ArticleDetialViewController: WKUIDelegate,WKNavigationDelegate,SDPhoto
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if (navigationAction.request.url?.scheme == "image-preview") {
             let miu = String.init(describing: "image-preview:")
-            
             let preview = String.init(describing: navigationAction.request.url!.absoluteString)
-            
             let path = preview.suffix(from:(miu.index(miu.startIndex, offsetBy: 14)))
             imgStr = String(path)
             self.previewPicture()

@@ -16,14 +16,29 @@ class MyViewController: BaseViewController {
         view.addSubview(self.tableView)
     }
     
+    override func configNavgationItem() {
+        super.configNavgationItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "btn_my_set_black")?.withRenderingMode(.alwaysOriginal),
+                                                                 style: UIBarButtonItemStyle.plain,
+                                                                 target: self,
+                                                                 action: #selector(didSelectRightBarButtonItem))
+    }
+    
+    @objc func didSelectRightBarButtonItem() {
+        
+    }
+    
     lazy var tableView:UITableView = {
         let mainTable = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-49), style: UITableViewStyle.plain)
         mainTable.delegate = self;
         mainTable.dataSource = self;
         //mainTable.separatorStyle = .none
-        mainTable.register(PersonUserTableViewCell.classForCoder(), forCellReuseIdentifier: "userCell")
-        mainTable.register(PersonMyTableViewCell.classForCoder(), forCellReuseIdentifier: "myCells")
-        mainTable.register(PersonTimeTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
+        mainTable.register(PersonUserTableViewCell.classForCoder(),
+                           forCellReuseIdentifier: "userCell")
+        mainTable.register(PersonMyTableViewCell.classForCoder(),
+                           forCellReuseIdentifier: "myCells")
+        mainTable.register(PersonTimeTableViewCell.classForCoder(),
+                           forCellReuseIdentifier: "cellIdentifier")
         return mainTable
     }()
 
@@ -45,13 +60,15 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! PersonUserTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "userCell",
+                                                     for: indexPath) as! PersonUserTableViewCell
             return cell
             
         }
 
         if indexPath.section == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath) as! PersonMyTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myCells",
+                                                     for: indexPath) as! PersonMyTableViewCell
             cell.imageNamed = String(imgNamedArray[indexPath.row])
             cell.title = String(data[indexPath.row])
             return cell
