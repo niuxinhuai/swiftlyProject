@@ -36,14 +36,20 @@ class RecomendTableViewCell: BaseTableViewCell {
                     make.height.equalTo((UIScreen.main.bounds.size.width-40)*175/335+112)
                     make.bottom.equalTo(contentView.snp.bottom).offset(-10)
                 }
-                contentView.layoutIfNeeded()
+                OperationQueue.main.addOperation({
+                    self.contentView.layoutIfNeeded()
+
+                })
             }else{
                 redView.snp.updateConstraints { (make) in
                     make.height.equalTo((UIScreen.main.bounds.size.width-40)*175/335+82)
                     make.bottom.equalTo(contentView.snp.bottom).offset(-10)
                 }
-                contentView.layoutIfNeeded()
-            }
+
+                OperationQueue.main.addOperation({
+                    self.contentView.layoutIfNeeded()
+                    
+                })}
             
         }
     }

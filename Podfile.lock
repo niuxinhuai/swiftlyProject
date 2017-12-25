@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.5.1)
   - HandyJSON (4.0.0-beta.1)
+  - MJRefresh (3.1.14)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
@@ -10,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - HandyJSON (~> 4.0.0-beta.1)
+  - MJRefresh
   - SDWebImage
   - SnapKit
   - SwiftyJSON
@@ -17,10 +19,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   HandyJSON: 428bb18e2c34c2a77361accebf90cf64e4f74118
+  MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: e4641225929e19037c1706de6e62ca51da8004e9
+PODFILE CHECKSUM: 4f79992ff44ec6552b8cb45e935adaeb53b96a58
 
 COCOAPODS: 1.2.1

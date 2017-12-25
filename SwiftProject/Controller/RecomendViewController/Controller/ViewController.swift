@@ -16,9 +16,8 @@ import SwiftyJSON
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            self.activity.startAnimating()
-            self.DownLoadData()
+            self.loadData()
+
             
         }
         
@@ -38,6 +37,7 @@ import SwiftyJSON
             Alamofire.request("https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 self.activity.stopAnimating()
+                self.tableView.mj_header.endRefreshing()
                 switch object.result.isSuccess{
                 case true:
                     if let value = object.result.value{
@@ -50,6 +50,13 @@ import SwiftyJSON
                     print(object.result.error!)
                 }
             }
+        }
+        
+        @objc private func loadData() {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            self.activity.startAnimating()
+            self.DownLoadData()
+
         }
         
         lazy var tableView:UITableView = {
@@ -68,6 +75,8 @@ import SwiftyJSON
             table.rowHeight = UITableViewAutomaticDimension
             table.register(RecomendTableViewCell.classForCoder(),
                            forCellReuseIdentifier: "cellIdentifier")
+            table.mj_header = NSRefreshHeader{self.loadData()}
+            
             self.view.addSubview(table)
             return table
         }()

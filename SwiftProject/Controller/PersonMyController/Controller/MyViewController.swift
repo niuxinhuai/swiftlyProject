@@ -39,6 +39,7 @@ class MyViewController: BaseViewController {
                            forCellReuseIdentifier: "myCells")
         mainTable.register(PersonTimeTableViewCell.classForCoder(),
                            forCellReuseIdentifier: "cellIdentifier")
+        
         return mainTable
     }()
 

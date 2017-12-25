@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */; };
+		2D03837F1FF0A87B00B61901 /* WCLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */; };
 		2D2F1FF01FE24E3F00EA46D5 /* NXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */; };
 		2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */; };
 		2D2F1FF21FE24E3F00EA46D5 /* SignTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */; };
@@ -78,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRefreshHeader.swift; sourceTree = "<group>"; };
+		2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCLLoadingView.swift; sourceTree = "<group>"; };
 		2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NXNavigationController.swift; sourceTree = "<group>"; };
 		2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTabbar.swift; sourceTree = "<group>"; };
@@ -193,6 +197,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D03837B1FF0A0FA00B61901 /* BaseRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */,
+				2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */,
+			);
+			path = BaseRefresh;
+			sourceTree = "<group>";
+		};
 		2D2F1FDF1FE24E3F00EA46D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +504,7 @@
 				2D2F1FE61FE24E3F00EA46D5 /* NavgationController */,
 				2D2F1FEA1FE24E3F00EA46D5 /* TabbarController */,
 				2D2F20091FE283DD00EA46D5 /* Base */,
+				2D03837B1FF0A0FA00B61901 /* BaseRefresh */,
 				2D2F209B1FE8F3AD00EA46D5 /* Extension */,
 				2D2F20A41FEA0E2E00EA46D5 /* objcFrameWork */,
 				2D2F1FDF1FE24E3F00EA46D5 /* Controller */,
@@ -738,12 +752,14 @@
 				2D2F20FD1FEBA2E400EA46D5 /* UIImage+MultiFormat.m in Sources */,
 				2D2F20051FE24F5300EA46D5 /* MyViewController.swift in Sources */,
 				2D2F20F61FEBA2E400EA46D5 /* SDWebImageDecoder.m in Sources */,
+				2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */,
 				2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */,
 				2D2F21001FEBA2E400EA46D5 /* UIImageView+WebCache.m in Sources */,
 				2D2F20C91FEB9FE200EA46D5 /* SDImageView.m in Sources */,
 				2D2F21041FECAFFF00EA46D5 /* PersonUserTableViewCell.swift in Sources */,
 				2D2F209A1FE8F00300EA46D5 /* BaseTableViewCell.swift in Sources */,
 				2D2F20F31FEBA2E400EA46D5 /* NSData+ImageContentType.m in Sources */,
+				2D03837F1FF0A87B00B61901 /* WCLLoadingView.swift in Sources */,
 				2D2F20F71FEBA2E400EA46D5 /* SDWebImageDownloader.m in Sources */,
 				2D2F20981FE8AB0200EA46D5 /* ReadModel.swift in Sources */,
 				2D2F200B1FE283F300EA46D5 /* BaseViewController.swift in Sources */,
