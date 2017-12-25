@@ -51,10 +51,9 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
     
     override func configNavgationItem() {
         super.configNavgationItem()
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "message_pic")?.withRenderingMode(.alwaysOriginal),
-                                                                 style: UIBarButtonItemStyle.plain,
-                                                                 target: self,
-                                                                 action: #selector(didSelectRightBarButtonItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.initNavBarbuttonItems(imageNamed: "message_pic",
+                                                                                  target: self,
+                                                                                  action: #selector(didSelectRightBarButtonItem))
     }
     
     func Menu() -> Void {

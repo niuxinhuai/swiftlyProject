@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */; };
 		2D03837F1FF0A87B00B61901 /* WCLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */; };
+		2D0383821FF0C66000B61901 /* NSBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0383811FF0C66000B61901 /* NSBarButtonItem.swift */; };
 		2D2F1FF01FE24E3F00EA46D5 /* NXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */; };
 		2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */; };
 		2D2F1FF21FE24E3F00EA46D5 /* SignTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRefreshHeader.swift; sourceTree = "<group>"; };
 		2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCLLoadingView.swift; sourceTree = "<group>"; };
+		2D0383811FF0C66000B61901 /* NSBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSBarButtonItem.swift; sourceTree = "<group>"; };
 		2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NXNavigationController.swift; sourceTree = "<group>"; };
 		2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTabbar.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */,
+				2D0383811FF0C66000B61901 /* NSBarButtonItem.swift */,
 			);
 			path = NavgationController;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				2D2F20CB1FEB9FE200EA46D5 /* SDPhotoBrowserd.m in Sources */,
 				2D2F20FA1FEBA2E400EA46D5 /* SDWebImagePrefetcher.m in Sources */,
 				2D2F20CA1FEB9FE200EA46D5 /* SDLoadingView.m in Sources */,
+				2D0383821FF0C66000B61901 /* NSBarButtonItem.swift in Sources */,
 				2D2F20F81FEBA2E400EA46D5 /* SDWebImageDownloaderOperation.m in Sources */,
 				2DDF90A71FECD3E200410B48 /* PersonModel.swift in Sources */,
 				2D2F20A01FE8F3AD00EA46D5 /* UIColorExtension.swift in Sources */,

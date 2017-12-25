@@ -18,10 +18,9 @@ class MyViewController: BaseViewController {
     
     override func configNavgationItem() {
         super.configNavgationItem()
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "btn_my_set_black")?.withRenderingMode(.alwaysOriginal),
-                                                                 style: UIBarButtonItemStyle.plain,
-                                                                 target: self,
-                                                                 action: #selector(didSelectRightBarButtonItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.initNavBarbuttonItems(imageNamed: "btn_my_set_black",
+                                                                                  target: self,
+                                                                                  action: #selector(didSelectRightBarButtonItem))
     }
     
     @objc func didSelectRightBarButtonItem() {

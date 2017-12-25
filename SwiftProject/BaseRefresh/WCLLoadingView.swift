@@ -1,28 +1,3 @@
-//
-//  WCLLoadingView.swift
-//  WCL
-//
-// **************************************************
-// *                                  _____         *
-// *         __  _  __     ___        \   /         *
-// *         \ \/ \/ /    / __\       /  /          *
-// *          \  _  /    | (__       /  /           *
-// *           \/ \/      \___/     /  /__          *
-// *                               /_____/          *
-// *                                                *
-// **************************************************
-//  Github  :https://github.com/imwcl
-//  HomePage:https://imwcl.com
-//  CSDN    :http://blog.csdn.net/wang631106979
-//
-//  Created by 王崇磊 on 16/9/14.
-//  Copyright © 2016年 王崇磊. All rights reserved.
-//
-// @class WCLLoadingView
-// @abstract Slack 的 Loading 动画
-// @discussion Slack 的 Loading 动画
-//
-// 动画步骤解析：http://blog.csdn.net/wang631106979/article/details/52473985
 
 import UIKit
 

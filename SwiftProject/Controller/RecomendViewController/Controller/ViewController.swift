@@ -23,10 +23,9 @@ import SwiftyJSON
         
         override func configNavgationItem() {
             super.configNavgationItem()
-            navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "img_have_search")?.withRenderingMode(.alwaysOriginal),
-                                                                     style: UIBarButtonItemStyle.plain,
-                                                                     target: self,
-                                                                     action: #selector(didSelectRightBarButtonItem))
+            navigationItem.rightBarButtonItem = UIBarButtonItem.initNavBarbuttonItems(imageNamed: "img_have_search",
+                                                                                      target: self,
+                                                                                      action: #selector(didSelectRightBarButtonItem))
         }
         
         @objc func didSelectRightBarButtonItem() {
