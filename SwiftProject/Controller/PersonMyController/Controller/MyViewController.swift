@@ -27,6 +27,14 @@ class MyViewController: BaseViewController {
         
     }
     
+    @objc private func loadData() {
+        perform(#selector(dismissRefresh), with: nil, afterDelay: 5)
+    }
+    
+    @objc private func dismissRefresh() {
+        tableView.mj_header.endRefreshing()
+    }
+    
     lazy var tableView:UITableView = {
         let mainTable = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-49), style: UITableViewStyle.plain)
         mainTable.delegate = self;
@@ -38,6 +46,7 @@ class MyViewController: BaseViewController {
                            forCellReuseIdentifier: "myCells")
         mainTable.register(PersonTimeTableViewCell.classForCoder(),
                            forCellReuseIdentifier: "cellIdentifier")
+        mainTable.mj_header = NSRefreshHeader{self.loadData()}
         
         return mainTable
     }()
@@ -98,6 +107,13 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("点击了\(indexPath.section)区\(indexPath.row)行")
+        let vc = LoginViewController()
+// 主队列开启异步执行，防止present过慢，影响用户体验
+        DispatchQueue.main.async {
+            self.present(vc, animated: true, completion: nil)
+
+        }
+        
     }
     
     

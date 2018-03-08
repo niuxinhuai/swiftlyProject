@@ -17,7 +17,9 @@ import SwiftyJSON
         override func viewDidLoad() {
             super.viewDidLoad()
             self.loadData()
-
+            
+            print("当前返回的值是\(PersonModel.CanOpenQQ)")
+            
             
         }
         
@@ -33,7 +35,7 @@ import SwiftyJSON
         }
         
         func DownLoadData() -> Void {
-            Alamofire.request("https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
+            Alamofire.request("https://api.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 self.activity.stopAnimating()
                 self.tableView.mj_header.endRefreshing()

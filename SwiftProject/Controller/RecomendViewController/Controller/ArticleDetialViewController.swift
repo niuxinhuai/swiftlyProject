@@ -160,7 +160,6 @@ extension ArticleDetialViewController: WKUIDelegate,WKNavigationDelegate,SDPhoto
             if path == imgStr{
                 currentIndex = section
             }
-            
         }
         let photoBrowserd = SDPhotoBrowserd()
         photoBrowserd.imageCount = webImageListArray.count

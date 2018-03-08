@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIBarButtonItem {
-    
+    // class 声明类方法调用
     class func initNavBarbuttonItems(imageNamed: String, target: Any?, action:Selector) ->UIBarButtonItem{
         let button = UIButton()
         button.addTarget(target, action: action, for: .touchUpInside)
@@ -19,5 +19,7 @@ extension UIBarButtonItem {
         
         return UIBarButtonItem.init(customView: button)
     }
+
+    
     
 }

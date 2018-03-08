@@ -32,9 +32,11 @@ class BaseViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Return")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backAction))
     }
     
-    func configNavgationItem() -> Void {
-        
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
+    
+    func configNavgationItem() -> Void {}
     
     @objc func backAction() {
         

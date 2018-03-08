@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         window?.rootViewController = SignTabBarController()
         window?.makeKeyAndVisible()
+        UMSocialModel.registerUM()
         // Override point for customization after application launch.
         return true
     }

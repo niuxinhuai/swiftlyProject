@@ -10,6 +10,11 @@
 		2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */; };
 		2D03837F1FF0A87B00B61901 /* WCLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */; };
 		2D0383821FF0C66000B61901 /* NSBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0383811FF0C66000B61901 /* NSBarButtonItem.swift */; };
+		2D03838B1FF0D94400B61901 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0383881FF0D94400B61901 /* LoginViewController.swift */; };
+		2D0383901FF1EC4700B61901 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03838F1FF1EC4700B61901 /* LoginView.swift */; };
+		2D0383931FF21DA400B61901 /* LoginWhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0383921FF21DA400B61901 /* LoginWhiteView.swift */; };
+		2D0E6E6F20206FA00060D5C1 /* AppDelegate+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E6E6E20206FA00060D5C1 /* AppDelegate+default.swift */; };
+		2D0E6E71202070ED0060D5C1 /* UMSocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E6E70202070ED0060D5C1 /* UMSocialModel.swift */; };
 		2D2F1FF01FE24E3F00EA46D5 /* NXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */; };
 		2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */; };
 		2D2F1FF21FE24E3F00EA46D5 /* SignTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */; };
@@ -54,6 +59,7 @@
 		2D2F21041FECAFFF00EA46D5 /* PersonUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21031FECAFFF00EA46D5 /* PersonUserTableViewCell.swift */; };
 		2D2F21061FECB01100EA46D5 /* PersonTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21051FECB01100EA46D5 /* PersonTimeTableViewCell.swift */; };
 		2D2F21081FECB02300EA46D5 /* PersonMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21071FECB02300EA46D5 /* PersonMyTableViewCell.swift */; };
+		2D68A69B204FD5B8007F43B7 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */; };
 		2DDF90A71FECD3E200410B48 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF90A61FECD3E200410B48 /* PersonModel.swift */; };
 		2DF5823B1FD7D0BD00E0A5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF582391FD7D0BD00E0A5D7 /* Main.storyboard */; };
 		2DF5823D1FD7D0BD00E0A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF5823C1FD7D0BD00E0A5D7 /* Assets.xcassets */; };
@@ -84,6 +90,11 @@
 		2D03837C1FF0A37F00B61901 /* NSRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRefreshHeader.swift; sourceTree = "<group>"; };
 		2D03837E1FF0A87B00B61901 /* WCLLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCLLoadingView.swift; sourceTree = "<group>"; };
 		2D0383811FF0C66000B61901 /* NSBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSBarButtonItem.swift; sourceTree = "<group>"; };
+		2D0383881FF0D94400B61901 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2D03838F1FF1EC4700B61901 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2D0383921FF21DA400B61901 /* LoginWhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWhiteView.swift; sourceTree = "<group>"; };
+		2D0E6E6E20206FA00060D5C1 /* AppDelegate+default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+default.swift"; sourceTree = "<group>"; };
+		2D0E6E70202070ED0060D5C1 /* UMSocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMSocialModel.swift; sourceTree = "<group>"; };
 		2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NXNavigationController.swift; sourceTree = "<group>"; };
 		2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTabbar.swift; sourceTree = "<group>"; };
@@ -155,6 +166,8 @@
 		2D2F21031FECAFFF00EA46D5 /* PersonUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUserTableViewCell.swift; sourceTree = "<group>"; };
 		2D2F21051FECB01100EA46D5 /* PersonTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTimeTableViewCell.swift; sourceTree = "<group>"; };
 		2D2F21071FECB02300EA46D5 /* PersonMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonMyTableViewCell.swift; sourceTree = "<group>"; };
+		2D68A699204FD5B8007F43B7 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		2DDF90A61FECD3E200410B48 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		2DF582321FD7D0BD00E0A5D7 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF5823A1FD7D0BD00E0A5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -208,12 +221,55 @@
 			path = BaseRefresh;
 			sourceTree = "<group>";
 		};
+		2D0383831FF0D88200B61901 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D0383871FF0D94400B61901 /* Controller */,
+				2D0383891FF0D94400B61901 /* LoginTool */,
+				2D0383861FF0D94300B61901 /* Model */,
+				2D03838A1FF0D94400B61901 /* View */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		2D0383861FF0D94300B61901 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D0383871FF0D94400B61901 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D0383881FF0D94400B61901 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D0383891FF0D94400B61901 /* LoginTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginTool;
+			sourceTree = "<group>";
+		};
+		2D03838A1FF0D94400B61901 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D03838F1FF1EC4700B61901 /* LoginView.swift */,
+				2D0383921FF21DA400B61901 /* LoginWhiteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2D2F1FDF1FE24E3F00EA46D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				2D2F1FE41FE24E3F00EA46D5 /* RecomendViewController */,
 				2D2F1FE01FE24E3F00EA46D5 /* HaveReadViewController */,
 				2D2F1FE21FE24E3F00EA46D5 /* PersonMyController */,
+				2D0383831FF0D88200B61901 /* LoginViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,6 +399,8 @@
 			isa = PBXGroup;
 			children = (
 				2DDF90A61FECD3E200410B48 /* PersonModel.swift */,
+				2D0E6E6E20206FA00060D5C1 /* AppDelegate+default.swift */,
+				2D0E6E70202070ED0060D5C1 /* UMSocialModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,6 +458,8 @@
 		2D2F20A41FEA0E2E00EA46D5 /* objcFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				2D68A699204FD5B8007F43B7 /* UICountingLabel.h */,
+				2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */,
 				2D2F20D01FEBA2E400EA46D5 /* SDWebImage */,
 				2D2F20BA1FEB9FE200EA46D5 /* SDPhotoBrowserd */,
 				2D2F20B91FEB9FE200EA46D5 /* NSString+commend.h */,
@@ -698,9 +758,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -728,13 +809,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -756,6 +840,7 @@
 				2D2F20051FE24F5300EA46D5 /* MyViewController.swift in Sources */,
 				2D2F20F61FEBA2E400EA46D5 /* SDWebImageDecoder.m in Sources */,
 				2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */,
+				2D0E6E71202070ED0060D5C1 /* UMSocialModel.swift in Sources */,
 				2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */,
 				2D2F21001FEBA2E400EA46D5 /* UIImageView+WebCache.m in Sources */,
 				2D2F20C91FEB9FE200EA46D5 /* SDImageView.m in Sources */,
@@ -764,12 +849,14 @@
 				2D2F20F31FEBA2E400EA46D5 /* NSData+ImageContentType.m in Sources */,
 				2D03837F1FF0A87B00B61901 /* WCLLoadingView.swift in Sources */,
 				2D2F20F71FEBA2E400EA46D5 /* SDWebImageDownloader.m in Sources */,
+				2D0383931FF21DA400B61901 /* LoginWhiteView.swift in Sources */,
 				2D2F20981FE8AB0200EA46D5 /* ReadModel.swift in Sources */,
 				2D2F200B1FE283F300EA46D5 /* BaseViewController.swift in Sources */,
 				2D2F20FF1FEBA2E400EA46D5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				2D2F20A21FE8F3AD00EA46D5 /* UIImageExtensions.swift in Sources */,
 				2D2F1FF91FE24F3600EA46D5 /* ViewController.swift in Sources */,
 				2D2F21081FECB02300EA46D5 /* PersonMyTableViewCell.swift in Sources */,
+				2D03838B1FF0D94400B61901 /* LoginViewController.swift in Sources */,
 				2D2F20CE1FEB9FE200EA46D5 /* NSString+commend.m in Sources */,
 				2D2F20081FE251A400EA46D5 /* RecomendTableViewCell.swift in Sources */,
 				2D2F21061FECB01100EA46D5 /* PersonTimeTableViewCell.swift in Sources */,
@@ -778,14 +865,17 @@
 				2D2F20AD1FEA11AB00EA46D5 /* ArticleDetialViewController.swift in Sources */,
 				2D2F20F21FEBA2E400EA46D5 /* MKAnnotationView+WebCache.m in Sources */,
 				2D2F1FF31FE24E3F00EA46D5 /* SignTabBarController.swift in Sources */,
+				2D0383901FF1EC4700B61901 /* LoginView.swift in Sources */,
 				2D2F20CB1FEB9FE200EA46D5 /* SDPhotoBrowserd.m in Sources */,
 				2D2F20FA1FEBA2E400EA46D5 /* SDWebImagePrefetcher.m in Sources */,
 				2D2F20CA1FEB9FE200EA46D5 /* SDLoadingView.m in Sources */,
+				2D68A69B204FD5B8007F43B7 /* UICountingLabel.m in Sources */,
 				2D0383821FF0C66000B61901 /* NSBarButtonItem.swift in Sources */,
 				2D2F20F81FEBA2E400EA46D5 /* SDWebImageDownloaderOperation.m in Sources */,
 				2DDF90A71FECD3E200410B48 /* PersonModel.swift in Sources */,
 				2D2F20A01FE8F3AD00EA46D5 /* UIColorExtension.swift in Sources */,
 				2D2F20F91FEBA2E400EA46D5 /* SDWebImageManager.m in Sources */,
+				2D0E6E6F20206FA00060D5C1 /* AppDelegate+default.swift in Sources */,
 				2D2F20FE1FEBA2E400EA46D5 /* UIImage+WebP.m in Sources */,
 				2D2F20CF1FEB9FE200EA46D5 /* WeakScriptMessageDelegate.m in Sources */,
 				2D2F20F41FEBA2E400EA46D5 /* SDImageCache.m in Sources */,

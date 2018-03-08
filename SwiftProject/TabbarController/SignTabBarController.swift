@@ -41,6 +41,7 @@ class SignTabBarController: UITabBarController {
                                 title: "我的",
                                 image: "tab_item_my_un_select",
                                 selectedImage:"tab_item_my_select")
+        self.selectedIndex = 1
 
     }
     

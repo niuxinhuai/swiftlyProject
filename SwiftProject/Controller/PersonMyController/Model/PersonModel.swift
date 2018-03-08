@@ -21,6 +21,12 @@ class PersonModel: NSObject {
                          "personal_compilations",
                          "personal_subscription",
                          "personal_message"]
+    
+    class var CanOpenQQ: Bool {
+        
+        return UIApplication.shared.canOpenURL(URL.init(string: "mqqapi://")!)
+    }
+    
 
 
 }

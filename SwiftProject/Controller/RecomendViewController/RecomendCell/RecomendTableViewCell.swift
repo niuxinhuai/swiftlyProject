@@ -177,4 +177,7 @@ class RecomendTableViewCell: BaseTableViewCell {
         return label
         
     }()
+    
+
+    
 }

@@ -5,3 +5,4 @@
 #import "NSString+commend.h"
 #import "WeakScriptMessageDelegate.h"
 #import "SDPhotoBrowserd.h"
+#import "UICountingLabel.h"

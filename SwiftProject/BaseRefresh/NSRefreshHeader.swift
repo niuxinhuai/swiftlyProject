@@ -42,6 +42,7 @@ class NSRefreshHeader: MJRefreshHeader  {
     override func scrollViewContentOffsetDidChange(_ change: [AnyHashable : Any]!) {
         super.scrollViewContentOffsetDidChange(change)
         loadingView.alpha = ((self.scrollView.mj_offsetY * -1)-64)/54
+
     }
     
     lazy var loadingView : WCLLoadingView = {
