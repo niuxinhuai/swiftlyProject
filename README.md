@@ -7,3 +7,6 @@ swift工程，持续更新中
 #wkwebView大图浏览模式
 
 ![image](https://github.com/niuxinhuai/swiftlyProject/blob/master/pictureModel.gif) 
+
+#swift4.0头像物理引擎动画
+![image](https://github.com/niuxinhuai/swiftlyProject/blob/master/Untitled1.gif) 
