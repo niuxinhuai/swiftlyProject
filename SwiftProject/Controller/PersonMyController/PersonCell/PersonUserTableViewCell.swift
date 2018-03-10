@@ -33,6 +33,7 @@ class PersonUserTableViewCell: BaseTableViewCell {
             make.width.lessThanOrEqualTo(220)
             make.height.equalTo(10)
         }
+        layerView.signleDragable()
     }
     
     lazy var layerView : UIView = {
@@ -53,6 +54,7 @@ class PersonUserTableViewCell: BaseTableViewCell {
         object.image = UIImage(named: "m8.jpg")
         object.layer.cornerRadius = 32
         object.layer.masksToBounds = true
+        
         return object
     }()
     lazy var nameLabel : UILabel = {

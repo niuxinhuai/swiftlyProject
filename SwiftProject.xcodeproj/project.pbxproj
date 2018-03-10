@@ -59,6 +59,7 @@
 		2D2F21041FECAFFF00EA46D5 /* PersonUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21031FECAFFF00EA46D5 /* PersonUserTableViewCell.swift */; };
 		2D2F21061FECB01100EA46D5 /* PersonTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21051FECB01100EA46D5 /* PersonTimeTableViewCell.swift */; };
 		2D2F21081FECB02300EA46D5 /* PersonMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21071FECB02300EA46D5 /* PersonMyTableViewCell.swift */; };
+		2D2F309C20536CDF00B917D7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F309B20536CDF00B917D7 /* UIView+Extension.swift */; };
 		2D68A69B204FD5B8007F43B7 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */; };
 		2DDF90A71FECD3E200410B48 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF90A61FECD3E200410B48 /* PersonModel.swift */; };
 		2DF5823B1FD7D0BD00E0A5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF582391FD7D0BD00E0A5D7 /* Main.storyboard */; };
@@ -166,6 +167,7 @@
 		2D2F21031FECAFFF00EA46D5 /* PersonUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUserTableViewCell.swift; sourceTree = "<group>"; };
 		2D2F21051FECB01100EA46D5 /* PersonTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTimeTableViewCell.swift; sourceTree = "<group>"; };
 		2D2F21071FECB02300EA46D5 /* PersonMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonMyTableViewCell.swift; sourceTree = "<group>"; };
+		2D2F309B20536CDF00B917D7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2D68A699204FD5B8007F43B7 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		2DDF90A61FECD3E200410B48 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 		2D2F209B1FE8F3AD00EA46D5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2D2F309B20536CDF00B917D7 /* UIView+Extension.swift */,
 				2D2F209C1FE8F3AD00EA46D5 /* UIColorExtension.swift */,
 				2D2F209D1FE8F3AD00EA46D5 /* UIDeviceExtension.swift */,
 				2D2F209E1FE8F3AD00EA46D5 /* UIImageExtensions.swift */,
@@ -842,6 +845,7 @@
 				2D03837D1FF0A37F00B61901 /* NSRefreshHeader.swift in Sources */,
 				2D0E6E71202070ED0060D5C1 /* UMSocialModel.swift in Sources */,
 				2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */,
+				2D2F309C20536CDF00B917D7 /* UIView+Extension.swift in Sources */,
 				2D2F21001FEBA2E400EA46D5 /* UIImageView+WebCache.m in Sources */,
 				2D2F20C91FEB9FE200EA46D5 /* SDImageView.m in Sources */,
 				2D2F21041FECAFFF00EA46D5 /* PersonUserTableViewCell.swift in Sources */,

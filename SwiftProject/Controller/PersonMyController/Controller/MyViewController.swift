@@ -107,12 +107,12 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("点击了\(indexPath.section)区\(indexPath.row)行")
-        let vc = LoginViewController()
-// 主队列开启异步执行，防止present过慢，影响用户体验
-        DispatchQueue.main.async {
-            self.present(vc, animated: true, completion: nil)
-
-        }
+//        let vc = LoginViewController()
+//// 主队列开启异步执行，防止present过慢，影响用户体验
+//        DispatchQueue.main.async {
+//            self.present(vc, animated: true, completion: nil)
+//
+//        }
         
     }
     
