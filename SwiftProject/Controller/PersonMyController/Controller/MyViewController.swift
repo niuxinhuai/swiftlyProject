@@ -7,13 +7,23 @@
 //
 
 import UIKit
-import HandyJSON
 class MyViewController: BaseViewController {
     var data:Array = PersonModel.data
     var imgNamedArray: Array = PersonModel.imgNamedArray
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(self.tableView)
+        view.addSubview(self.mainScroll)
+        
+        var array = [1,2,3,4,5]
+        var min = [1,2]
+        
+        array.remove(at: 0)
+        array.remove(at: 0)
+        array.append(min[0])
+        array.append(min[1])
+        print(array)
+        
+        
     }
     
     override func configNavgationItem() {
@@ -22,6 +32,8 @@ class MyViewController: BaseViewController {
                                                                                   target: self,
                                                                                   action: #selector(didSelectRightBarButtonItem))
     }
+    
+    
     
     @objc func didSelectRightBarButtonItem() {
         
@@ -35,11 +47,23 @@ class MyViewController: BaseViewController {
         tableView.mj_header.endRefreshing()
     }
     
+    lazy var mainScroll : UIScrollView = {
+        let object = UIScrollView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        object.bounces = false
+        object.delegate = self
+        object.backgroundColor = UIColor.cyan
+        object.addSubview(self.tableView)
+        return object
+    }()
+
+    
+    
     lazy var tableView:UITableView = {
-        let mainTable = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-49), style: UITableViewStyle.plain)
+        let mainTable = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 49), style: UITableViewStyle.plain)
         mainTable.delegate = self;
         mainTable.dataSource = self;
         //mainTable.separatorStyle = .none
+        mainTable.backgroundColor = UIColor.red
         mainTable.register(PersonUserTableViewCell.classForCoder(),
                            forCellReuseIdentifier: "userCell")
         mainTable.register(PersonMyTableViewCell.classForCoder(),
@@ -53,7 +77,21 @@ class MyViewController: BaseViewController {
 
 }
 
-extension MyViewController: UITableViewDelegate,UITableViewDataSource{
+extension MyViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let tempContentOffsetY = CGFloat(49)
+        let tabOffsetY = scrollView.contentOffset.y
+        print(tabOffsetY)
+        if  tabOffsetY < tempContentOffsetY {
+//            self.mainScroll.setContentOffset(CGPoint.zero, animated: false)
+            
+        }
+        
+    }
+}
+
+
+extension MyViewController: UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         switch section {
         case 0:
@@ -115,6 +153,11 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource{
 //        }
         
     }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
     
     
 }

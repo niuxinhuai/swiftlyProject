@@ -17,10 +17,10 @@ class RecomendTableViewCell: BaseTableViewCell {
         didSet {
             
             //guard let model = model else { return }
-            bgImageView.sd_setImage(with: NSURL(string: (model?.cover)!)! as URL, placeholderImage: UIImage(named: "m8.jpg"))
-            titleLabel.text = model?.title
-            nickLabel.text = "\(String(describing: model!.issuer_nickname))   ⠂  \(String(describing: model!.read_num))人读过"
-            recommendLabel.text = "\(String(describing: model!.recommend_num))位同行推荐"
+            bgImageView.sd_setImage(with: NSURL(string: (model!.cover)!)! as URL, placeholderImage: UIImage(named: "m8.jpg"))
+            titleLabel.text = model!.title!
+            nickLabel.text = "\(String(describing: model!.issuer_nickname!))   ⠂  \(String(describing: model!.read_num!))人读过"
+            recommendLabel.text = model!.recommend_num! + "位同行推荐"
             if model!.type == "article" {
                 atricleTypeLabel.text = "文章"
                 atricleTypeLabel.backgroundColor = UIColor.hex(hexString: "#ffffff").withAlphaComponent(0.85)

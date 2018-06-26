@@ -22,6 +22,7 @@ class HaveReadViewController: BaseViewController {
     var downloadRequest: DownloadRequest!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addSubview(stopBtn)
         stopBtn.snp.makeConstraints { (make) in
             make.centerX.equalTo(view.snp.centerX)
@@ -51,12 +52,24 @@ class HaveReadViewController: BaseViewController {
             make.top.equalTo(view.snp.top).offset(400)
         }
         view.addSubview(countingLabel)
-//        countingLabel.snp.makeConstraints { (make) in
-//            make.left.equalTo(100)
-//            make.width.equalTo(200)
-//            make.height.equalTo(50)
-//            make.top.equalTo(view.snp.top).offset(600)
-//        }
+        
+        view.addSubview(textfield)
+        textfield.snp.makeConstraints { (make) in
+            make.width.equalTo(50)
+            make.height.equalTo(20)
+            make.bottom.equalTo(view.snp.bottom).offset(-100)
+            make.left.equalTo(50)
+        }
+        textfield.becomeFirstResponder()
+        
+        
+        view.addSubview(textfield1)
+        textfield1.snp.makeConstraints { (make) in
+            make.width.equalTo(50)
+            make.height.equalTo(20)
+            make.bottom.equalTo(view.snp.bottom).offset(-100)
+            make.left.equalTo(200)
+        }
         countingLabel.attributedFormatBlock = {(_ object) in
             let str = "\(Int(object))%"
             let attrStr = NSMutableAttributedString.init(string: str)
@@ -69,26 +82,9 @@ class HaveReadViewController: BaseViewController {
         }
         countingLabel.format = "%d"
         countingLabel.count(from: 0, to: 10239, withDuration: 2)
-//        createFile()
         
-        //设置下载路径。保存到用户文档目录，文件名不变，如果有同名文件则会覆盖
-        self.destination = { _, response in
-            let documentsURL = FileManager.default.urls(for: .documentDirectory,
-                                                        in: .userDomainMask)[0]
-            let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
-            print(fileURL)
-            
-            //两个参数表示如果有同名文件则会覆盖，如果路径中文件夹不存在则会自动创建
-            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-        }
-        
-        for i in 0...3 {
-            for n in 0...2 {
-                print("当前走到\(i)第\(n)个")
-                requestA(id: i, maxId: n)
-            }
-        }
-        
+        view.addSubview(searchBar)
+        searchBar.frame = CGRect.init(x: 44, y: 400, width: UIScreen.main.bounds.width - 60, height: 30)
 
         // Do any additional setup after loading the view.
     }
@@ -239,7 +235,58 @@ class HaveReadViewController: BaseViewController {
         return object
     }()
 
+    lazy var textfield : UITextField = {
+        let object = UITextField()
+        object.returnKeyType = .done
+        object.font = UIFont.systemFont(ofSize: 20)
+        object.textColor = UIColor.black
+        object.tag = 100
+        object.backgroundColor = UIColor.cyan
+        object.addTarget(self, action: #selector(textfieldLengthDidChanged(textF:)), for: .editingChanged)
+        return object
+    }()
     
+    lazy var textfield1 : UITextField = {
+        let object = UITextField()
+        object.returnKeyType = .done
+        object.font = UIFont.systemFont(ofSize: 20)
+        object.textColor = UIColor.black
+        object.tag = 101
+        object.backgroundColor = UIColor.green
+        object.addTarget(self, action: #selector(textfieldLengthDidChanged(textF:)), for: .editingChanged)
+        return object
+    }()
+    @objc func textfieldLengthDidChanged(textF: UITextField){
+        
+        if textF.tag == 100 {
+            textfield1.becomeFirstResponder()
+        }else {
+            
+        }
+        
+        
+    }
+    
+    lazy var searchBar : UISearchBar = {
+        let object = UISearchBar()
+//        object.delegate = self
+        object.placeholder = "请输入要搜索的中英文"
+        object.barStyle = .default
+        object.backgroundImage = UIImage.init()
+        object.barTintColor = UIColor.white
+        object.tintColor = UIColor.green
+        object.layer.cornerRadius = 15
+        object.clipsToBounds = true
+        object.backgroundColor = UIColor.cyan
+        let textfield = object.value(forKey: "searchField") as! UITextField
+        textfield.backgroundColor = UIColor.cyan
+        textfield.returnKeyType = .search
+//        textfield.layer.cornerRadius = 15
+//        textfield.layer.masksToBounds = true
+        
+        textfield.becomeFirstResponder()
+        return object
+    }()
 
     
 

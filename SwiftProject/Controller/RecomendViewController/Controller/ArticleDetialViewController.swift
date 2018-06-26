@@ -19,7 +19,9 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         self.init()
         // 拿到传递过来的url需要进行编码才可以使用
         let encodeUrl = String.encode(url)
-        let urlStr = String.init("https://promotion-dev.beichoo.com/beichoo_app/article/index.html?user_id=&token=&article_id=\(String(describing: encodeUrl!))")
+        let urlStr = String.init("https://promotion.beichoo.com/beichoo_app/article/index.html?user_id=&token=&article_id=\(String(describing: encodeUrl!))")
+
+        print(urlStr)
         self.request = URLRequest.init(url: URL.init(string: urlStr)!)
     }
     
@@ -29,6 +31,10 @@ class ArticleDetialViewController: BaseViewController,UIScrollViewDelegate {
         view.addSubview(self.progressView)
         articleWeb.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         articleWeb.load(request)
+//        let path = Bundle.main.path(forResource: "setting - 副本", ofType: "html")
+//        let apphtml: String = try! String.init(contentsOfFile: path!, encoding: String.Encoding.utf8)
+//        let baseUrl = URL.init(fileURLWithPath: path!)
+//        articleWeb.loadHTMLString(apphtml, baseURL: baseUrl)
         self.Menu()
     }
     

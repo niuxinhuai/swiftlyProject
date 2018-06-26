@@ -7,20 +7,34 @@
 //
 
 import UIKit
-import HandyJSON
-struct items: HandyJSON {
+import SwiftyJSON
+struct items {
     
-    var source = String()
-    var tab = String()
-    var me = String()
-    var id = String()
-    var recommend_num = String()
-    var title = String()
-    var brief = String()
-    var read_num = String()
-    var cover = String()
-    var issuer_nickname = String()
-    var type = String()
+    var source: String?
+    var tab: String?
+    var me: String?
+    var id: String?
+    var recommend_num: String?
+    var title: String?
+    var brief: String?
+    var read_num: String?
+    var cover: String?
+    var issuer_nickname: String?
+    var type: String?
+    
+    init(json: JSON) {
+        self.source                   = json["source"].stringValue
+        self.tab                      = json["tab"].stringValue
+        self.me                       = json["me"].stringValue
+        self.id                       = json["id"].stringValue
+        self.recommend_num            = json["recommend_num"].stringValue
+        self.title                    = json["title"].stringValue
+        self.brief                    = json["brief"].stringValue
+        self.read_num                 = json["read_num"].stringValue
+        self.cover                    = json["cover"].stringValue
+        self.issuer_nickname          = json["issuer_nickname"].stringValue
+        self.type                     = json["type"].stringValue
+    }
     
 }
 

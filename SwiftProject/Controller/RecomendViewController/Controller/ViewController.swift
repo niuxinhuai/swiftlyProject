@@ -8,11 +8,10 @@
 
 import UIKit
 import Alamofire
-import HandyJSON
 import SwiftyJSON
 //https://api-dev.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec
     class ViewController: BaseViewController {
-        var jsonObject = JSON()
+        var dataSource = [items]()
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -34,7 +33,7 @@ import SwiftyJSON
             
         }
         
-        func DownLoadData() -> Void {
+        func DownLoadData() -> Void {//https://api.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec
             Alamofire.request("https://api.beichoo.com/bc/0.1/special/light_reading?nonce=511720&sig=6b5eb6b67dcd9b9c7b41153dd8c9aab7d80404ec").responseData { (object ) in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 self.activity.stopAnimating()
@@ -43,8 +42,14 @@ import SwiftyJSON
                 case true:
                     if let value = object.result.value{
                         let json = JSON(value)
-                        self.jsonObject = json
-                      //  self.jsonObject = try! JSONDecoder().decode(ResponseData.self, from: value)
+                        if json["data"]["item"].arrayValue.count != 0 {
+                            let array = json["data"]["item"].arrayValue
+                            array.forEach({ (model) in
+                                let item = items.init(json: model)
+                                self.dataSource.append(item)
+                            })
+                        }
+                        
                         self.tableView.reloadData()
                     }
                 case false:
@@ -92,21 +97,22 @@ import SwiftyJSON
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.jsonObject["data"]["item"].count
+        return dataSource.count
         
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier",
                                                  for: indexPath) as! RecomendTableViewCell
-        let dic:Dictionary = self.jsonObject["data"]["item"].array![indexPath.row].dictionary!
-        cell.model = JSONDeserializer.deserializeFrom(dict:dic)
+        
+        cell.model = dataSource[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let dic:Dictionary = self.jsonObject["data"]["item"].array![indexPath.row].dictionary!
-        if dic["type"] == "article" {
-            let url = dic["id"]?.string
+        let model = dataSource[indexPath.row]
+        
+        if model.type == "article" {
+            let url = model.id
             let vc = ArticleDetialViewController.init(url: url)
             navigationController?.pushViewController(vc, animated: true)
         }
