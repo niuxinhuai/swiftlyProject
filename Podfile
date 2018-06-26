@@ -8,7 +8,6 @@ pod 'SnapKit'
 pod 'Alamofire', '~> 4.5'
 pod 'SwiftyJSON'
 pod 'SDWebImage'
-pod 'HandyJSON', '~> 4.0.0-beta.1'
 pod 'MJRefresh'
 pod 'RxSwift',    '~> 4.0.0’
 pod 'RxCocoa',    '~> 4.0'

@@ -61,6 +61,7 @@
 		2D2F21081FECB02300EA46D5 /* PersonMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F21071FECB02300EA46D5 /* PersonMyTableViewCell.swift */; };
 		2D2F309C20536CDF00B917D7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F309B20536CDF00B917D7 /* UIView+Extension.swift */; };
 		2D68A69B204FD5B8007F43B7 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */; };
+		2DB65FBD2086F6D6009FADCE /* setting - 副本.html in Resources */ = {isa = PBXBuildFile; fileRef = 2DB65FBC2086F6D6009FADCE /* setting - 副本.html */; };
 		2DDF90A71FECD3E200410B48 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF90A61FECD3E200410B48 /* PersonModel.swift */; };
 		2DF5823B1FD7D0BD00E0A5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF582391FD7D0BD00E0A5D7 /* Main.storyboard */; };
 		2DF5823D1FD7D0BD00E0A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF5823C1FD7D0BD00E0A5D7 /* Assets.xcassets */; };
@@ -170,6 +171,7 @@
 		2D2F309B20536CDF00B917D7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2D68A699204FD5B8007F43B7 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		2DB65FBC2086F6D6009FADCE /* setting - 副本.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "setting - 副本.html"; sourceTree = "<group>"; };
 		2DDF90A61FECD3E200410B48 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		2DF582321FD7D0BD00E0A5D7 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF5823A1FD7D0BD00E0A5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		2D2F1FF41FE24F3500EA46D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2DB65FBC2086F6D6009FADCE /* setting - 副本.html */,
 				2D2F1FF51FE24F3500EA46D5 /* ViewController.swift */,
 				2D2F20AC1FEA11AB00EA46D5 /* ArticleDetialViewController.swift */,
 			);
@@ -631,7 +634,6 @@
 				2DF5822F1FD7D0BD00E0A5D7 /* Frameworks */,
 				2DF582301FD7D0BD00E0A5D7 /* Resources */,
 				5864DA782E6A143DAF48000F /* [CP] Embed Pods Frameworks */,
-				D997CA3D95FE3F278D06D21B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -730,6 +732,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB65FBD2086F6D6009FADCE /* setting - 副本.html in Resources */,
 				2D2F20CC1FEB9FE200EA46D5 /* SDPhotoBrowserd.podspec in Resources */,
 				2DF582401FD7D0BD00E0A5D7 /* LaunchScreen.storyboard in Resources */,
 				2DF5823D1FD7D0BD00E0A5D7 /* Assets.xcassets in Resources */,
@@ -764,7 +767,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -777,7 +779,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -789,21 +790,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D997CA3D95FE3F278D06D21B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB3C42BD10420CABD9D10134 /* [CP] Check Pods Manifest.lock */ = {
@@ -1054,17 +1040,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2WB8E557H;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niuxinhuai.text.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1074,16 +1062,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2WB8E557H;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niuxinhuai.text.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

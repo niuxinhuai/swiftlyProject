@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			/*html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-views,
+			.mui-view,
+			.mui-pages,
+			.mui-page,
+			.mui-page-content {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #efeff4;
+			}
+			.mui-pages {
+				top: 46px;
+				height: auto;
+			}
+			.mui-scroll-wrapper,
+			.mui-scroll {
+				background-color: #efeff4;
+			}
+			.mui-page.mui-transitioning {
+				-webkit-transition: -webkit-transform 300ms ease;
+				transition: transform 300ms ease;
+			}
+			.mui-page-left {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			.mui-ios .mui-page-left {
+				-webkit-transform: translate3d(-20%, 0, 0);
+				transform: translate3d(-20%, 0, 0);
+			}
+			.mui-navbar {
+				position: fixed;
+				right: 0;
+				left: 0;
+				z-index: 10;
+				height: 44px;
+				background-color: #f7f7f8;
+			}
+			.mui-navbar .mui-bar {
+				position: absolute;
+				background: transparent;
+				text-align: center;
+			}
+			.mui-android .mui-navbar-inner.mui-navbar-left {
+				opacity: 0;
+			}
+			.mui-ios .mui-navbar-left .mui-left,
+			.mui-ios .mui-navbar-left .mui-center,
+			.mui-ios .mui-navbar-left .mui-right {
+				opacity: 0;
+			}
+			.mui-navbar .mui-btn-nav {
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			.mui-navbar .mui-bar .mui-title {
+				display: inline-block;
+				width: auto;
+			}
+			.mui-page-shadow {
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 16px;
+				height: 100%;
+				z-index: -1;
+				content: '';
+			}
+			.mui-page-shadow {
+				background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+				background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+			}
+			.mui-navbar-inner.mui-transitioning,
+			.mui-navbar-inner .mui-transitioning {
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+			}
+			.mui-page {
+				display: none;
+			}
+			.mui-pages .mui-page {
+				display: block;
+			}
+			.mui-page .mui-table-view:first-child {
+				margin-top: 15px;
+			}
+			.mui-page .mui-table-view:last-child {
+				margin-bottom: 30px;
+			}
+			.mui-table-view {
+				margin-top: 20px;
+			}
+			
+			.mui-table-view span.mui-pull-right {
+				color: #999;
+			}
+			.mui-table-view-divider {
+				background-color: #efeff4;
+				font-size: 14px;
+			}
+			.mui-table-view-divider:before,
+			.mui-table-view-divider:after {
+				height: 0;
+			}
+			.head {
+				height: 40px;
+			}
+			#head {
+				line-height: 40px;
+			}
+			.head-img {
+				width: 40px;
+				height: 40px;
+			}
+			#head-img1 {
+				position: absolute;
+				bottom: 10px;
+				right: 40px;
+				width: 40px;
+				height: 40px;
+			}
+			.update {
+				font-style: normal;
+				color: #999999;
+				margin-right: -25px;
+				font-size: 15px
+			}
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-ios .mui-navbar .mui-bar .mui-title {
+				position: static;
+			}
+			/*问题反馈在setting页面单独的css*/
+			/*#feedback .mui-popover{
+				position: fixed;
+			}
+			#feedback .mui-table-view:last-child {
+			    margin-bottom: 0px;
+			}
+			#feedback .mui-table-view:first-child {
+			    margin-top: 0px;
+			}
+			
+			.mui-plus.mui-plus-stream .mui-stream-hidden{
+				display: none !important;
+			}*/
+			
+			/*问题反馈在setting页面单独的css==end*/
+			
+		</style>
+		<!-- <link rel="stylesheet" type="text/css" href="../css/feedback.css" /> -->
+	</head>
+
+	<body class="mui-fullscreen">
+		<!--页面主结构开始-->
+	<!-- 	<div id="app" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div> -->
+		<!--页面主结构结束-->
+		<!--单页面开始-->
+
+		<!--单页面结束-->
+		<div id="" class="mui-page">
+		
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a id="head" class="mui-navigate-right">头像
+								<span class="mui-pull-right head">
+									<img class="head-img mui-action-preview" id="head-img1" src=""/>
+								</span>
+							</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>姓名<span class="mui-pull-right">Hbuilder</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>HBuilder账号<span class="mui-pull-right">hbuilder@dcloud.io</span></a>
+							</li>
+						</ul>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script src="../js/mui.view.js "></script>
+	<!-- <script src='../js/feedback.js'></script> -->
+	<script>
+		mui.init();
+		/*点击头像触发*/ 
+        document.getElementById('head').addEventListener('tap', function() { 
+        	
+            if (mui.os.plus) { 
+            	mui.toast('欢迎体验Hello MUI');
+                var a = [{ 
+                    title: "拍照" 
+                }, { 
+                    title: "从手机相册选择" 
+                }]; 
+                plus.nativeUI.actionSheet({ 
+                    title: "修改用户头像", 
+                    cancel: "取消", 
+                    buttons: a 
+                }, function(b) { /*actionSheet 按钮点击事件*/ 
+                    switch (b.index) { 
+                        case 0: 
+                            break; 
+                        case 1: 
+                            getImage(); /*拍照*/ 
+                            break; 
+                        case 2: 
+                            galleryImg();/*打开相册*/ 
+                            break; 
+                        default: 
+                            break; 
+                    } 
+                }) 
+            } 
+        }, false); 
+
+        //拍照 
+        function getImage() { 
+            var c = plus.camera.getCamera(); 
+            c.captureImage(function(e) { 
+                plus.io.resolveLocalFileSystemURL(e, function(entry) { 
+                    var s = entry.toLocalURL() + "?version=" + new Date().getTime(); 
+                    uploadHead(s); /*上传图片*/ 
+                }, function(e) { 
+                    console.log("读取拍照文件错误：" + e.message); 
+                }); 
+            }, function(s) { 
+                console.log("error" + s); 
+            }, { 
+                filename: "_doc/head.png" 
+            }) 
+        } 
+
+        //本地相册选择 
+        function galleryImg() { 
+            plus.gallery.pick(function(a) { 
+                plus.io.resolveLocalFileSystemURL(a, function(entry) { 
+                    plus.io.resolveLocalFileSystemURL("_doc/", function(root) { 
+                        root.getFile("head.png", {}, function(file) { 
+                            //文件已存在 
+                            file.remove(function() { 
+                                console.log("file remove success"); 
+                                entry.copyTo(root, 'head.png', function(e) { 
+                                        var e = e.fullPath + "?version=" + new Date().getTime(); 
+                                        uploadHead(e); /*上传图片*/ 
+                                        //变更大图预览的src 
+                                        //目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现 
+                                    }, 
+                                    function(e) { 
+                                        console.log('copy image fail:' + e.message); 
+                                    }); 
+                            }, function() { 
+                                console.log("delete image fail:" + e.message); 
+                            }); 
+                        }, function() { 
+                            //文件不存在 
+                            entry.copyTo(root, 'head.png', function(e) { 
+                                    var path = e.fullPath + "?version=" + new Date().getTime(); 
+                                    uploadHead(path); /*上传图片*/ 
+                                }, 
+                                function(e) { 
+                                    console.log('copy image fail:' + e.message); 
+                                }); 
+                        }); 
+                    }, function(e) { 
+                        console.log("get _www folder fail"); 
+                    }) 
+                }, function(e) { 
+                    console.log("读取拍照文件错误：" + e.message); 
+                }); 
+            }, function(a) {}, { 
+                filter: "image" 
+            }) 
+        }; 
+
+        //上传头像图片 
+        function uploadHead(imgPath) { 
+        	var mainImage= document.getElementById("head");
+            console.log("imgPath = " + imgPath); 
+            mainImage.src = imgPath; 
+            mainImage.style.width = "60px"; 
+            mainImage.style.height = "60px"; 
+ 
+            var image = new Image(); 
+            image.src = imgPath; 
+            image.onload = function() { 
+                var imgData = getBase64Image(image); 
+                /*在这里调用上传接口*/ 
+//              mui.ajax("图片上传接口", { 
+//                  data: { 
+//                       
+//                  }, 
+//                  dataType: 'json', 
+//                  type: 'post', 
+//                  timeout: 10000, 
+//                  success: function(data) { 
+//                      console.log('上传成功'); 
+//                  }, 
+//                  error: function(xhr, type, errorThrown) { 
+//                      mui.toast('网络异常，请稍后再试！'); 
+//                  } 
+//              }); 
+            } 
+    } 
+        //将图片压缩转成base64 
+        function getBase64Image(img) { 
+            var canvas = document.createElement("canvas"); 
+            var width = img.width; 
+            var height = img.height; 
+            // calculate the width and height, constraining the proportions 
+            if (width > height) { 
+                if (width > 100) { 
+                    height = Math.round(height *= 100 / width); 
+                    width = 100; 
+                } 
+            } else { 
+                if (height > 100) { 
+                    width = Math.round(width *= 100 / height); 
+                    height = 100; 
+                } 
+            } 
+            canvas.width = width;   /*设置新的图片的宽度*/ 
+            canvas.height = height; /*设置新的图片的长度*/ 
+            var ctx = canvas.getContext("2d"); 
+            ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
+            var dataURL = canvas.toDataURL("image/png", 0.8); 
+            return dataURL.replace("data:image/png;base64,", ""); 
+        }    
+		
+	</script>
+
+</html>
