@@ -357,8 +357,7 @@ extension ZMKeyBoardView {
             }else{
                 //直接删除
                 tmp.deleteBackward()
-            }
-            
+            } 
         }
     }
 }

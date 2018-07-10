@@ -19,7 +19,6 @@ class KeyBoardTipImageView: UIImageView {
             }
         }
     }
-    
 
     init() {
         let image = UIImage.init(named: "keyboard_magnifier")

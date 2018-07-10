@@ -17,8 +17,6 @@ class ZMKeyBoadModel: NSObject {
         self.keyBoadString = str
         self.isCapital = flag
     }
-    
-    
 }
 
 extension ZMKeyBoadModel {

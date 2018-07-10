@@ -67,20 +67,10 @@
 		2D42710320EFB18800FE3429 /* ZMKeyBoardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D42710220EFB18800FE3429 /* ZMKeyBoardButtonView.swift */; };
 		2D42710F20EFBBEB00FE3429 /* keyboard_magnifier@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710520EFBBEB00FE3429 /* keyboard_magnifier@2x.png */; };
 		2D42711020EFBBEB00FE3429 /* keyboard_magnifier@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710620EFBBEB00FE3429 /* keyboard_magnifier@3x.png */; };
-		2D42711120EFBBEB00FE3429 /* newdelete_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710720EFBBEB00FE3429 /* newdelete_a@2x.png */; };
-		2D42711220EFBBEB00FE3429 /* newdelete_a@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710820EFBBEB00FE3429 /* newdelete_a@3x.png */; };
-		2D42711320EFBBEB00FE3429 /* newdelete_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710920EFBBEB00FE3429 /* newdelete_b@2x.png */; };
-		2D42711420EFBBEB00FE3429 /* newdelete_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710A20EFBBEB00FE3429 /* newdelete_b@3x.png */; };
-		2D42711520EFBBEB00FE3429 /* up_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710B20EFBBEB00FE3429 /* up_a@2x.png */; };
-		2D42711620EFBBEB00FE3429 /* up_a@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710C20EFBBEB00FE3429 /* up_a@3x.png */; };
-		2D42711720EFBBEB00FE3429 /* up_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710D20EFBBEB00FE3429 /* up_b@2x.png */; };
-		2D42711820EFBBEB00FE3429 /* up_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42710E20EFBBEB00FE3429 /* up_b@3x.png */; };
 		2D42711B20F33D6300FE3429 /* capitalNormal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42711920F33D6300FE3429 /* capitalNormal@3x.png */; };
 		2D42711C20F33D6300FE3429 /* capitalNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42711A20F33D6300FE3429 /* capitalNormal@2x.png */; };
 		2D42711F20F33DBB00FE3429 /* capitalSelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42711D20F33DBB00FE3429 /* capitalSelect@2x.png */; };
 		2D42712020F33DBB00FE3429 /* capitalSelect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42711E20F33DBB00FE3429 /* capitalSelect@3x.png */; };
-		2D42712320F33EEF00FE3429 /* keyDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42712120F33EEF00FE3429 /* keyDelete@2x.png */; };
-		2D42712420F33EEF00FE3429 /* keyDelete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42712220F33EEF00FE3429 /* keyDelete@3x.png */; };
 		2D42712720F33F3500FE3429 /* keyNewDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42712520F33F3500FE3429 /* keyNewDelete@2x.png */; };
 		2D42712820F33F3500FE3429 /* keyNewDelete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D42712620F33F3500FE3429 /* keyNewDelete@3x.png */; };
 		2D68A69B204FD5B8007F43B7 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D68A69A204FD5B8007F43B7 /* UICountingLabel.m */; };
@@ -201,20 +191,10 @@
 		2D42710220EFB18800FE3429 /* ZMKeyBoardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMKeyBoardButtonView.swift; sourceTree = "<group>"; };
 		2D42710520EFBBEB00FE3429 /* keyboard_magnifier@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_magnifier@2x.png"; sourceTree = "<group>"; };
 		2D42710620EFBBEB00FE3429 /* keyboard_magnifier@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_magnifier@3x.png"; sourceTree = "<group>"; };
-		2D42710720EFBBEB00FE3429 /* newdelete_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newdelete_a@2x.png"; sourceTree = "<group>"; };
-		2D42710820EFBBEB00FE3429 /* newdelete_a@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newdelete_a@3x.png"; sourceTree = "<group>"; };
-		2D42710920EFBBEB00FE3429 /* newdelete_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newdelete_b@2x.png"; sourceTree = "<group>"; };
-		2D42710A20EFBBEB00FE3429 /* newdelete_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newdelete_b@3x.png"; sourceTree = "<group>"; };
-		2D42710B20EFBBEB00FE3429 /* up_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up_a@2x.png"; sourceTree = "<group>"; };
-		2D42710C20EFBBEB00FE3429 /* up_a@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up_a@3x.png"; sourceTree = "<group>"; };
-		2D42710D20EFBBEB00FE3429 /* up_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up_b@2x.png"; sourceTree = "<group>"; };
-		2D42710E20EFBBEB00FE3429 /* up_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up_b@3x.png"; sourceTree = "<group>"; };
 		2D42711920F33D6300FE3429 /* capitalNormal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capitalNormal@3x.png"; sourceTree = "<group>"; };
 		2D42711A20F33D6300FE3429 /* capitalNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capitalNormal@2x.png"; sourceTree = "<group>"; };
 		2D42711D20F33DBB00FE3429 /* capitalSelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capitalSelect@2x.png"; sourceTree = "<group>"; };
 		2D42711E20F33DBB00FE3429 /* capitalSelect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capitalSelect@3x.png"; sourceTree = "<group>"; };
-		2D42712120F33EEF00FE3429 /* keyDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyDelete@2x.png"; sourceTree = "<group>"; };
-		2D42712220F33EEF00FE3429 /* keyDelete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyDelete@3x.png"; sourceTree = "<group>"; };
 		2D42712520F33F3500FE3429 /* keyNewDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyNewDelete@2x.png"; sourceTree = "<group>"; };
 		2D42712620F33F3500FE3429 /* keyNewDelete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyNewDelete@3x.png"; sourceTree = "<group>"; };
 		2D68A699204FD5B8007F43B7 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
@@ -663,22 +643,12 @@
 			children = (
 				2D42712520F33F3500FE3429 /* keyNewDelete@2x.png */,
 				2D42712620F33F3500FE3429 /* keyNewDelete@3x.png */,
-				2D42712120F33EEF00FE3429 /* keyDelete@2x.png */,
-				2D42712220F33EEF00FE3429 /* keyDelete@3x.png */,
 				2D42711D20F33DBB00FE3429 /* capitalSelect@2x.png */,
 				2D42711E20F33DBB00FE3429 /* capitalSelect@3x.png */,
 				2D42711A20F33D6300FE3429 /* capitalNormal@2x.png */,
 				2D42711920F33D6300FE3429 /* capitalNormal@3x.png */,
 				2D42710520EFBBEB00FE3429 /* keyboard_magnifier@2x.png */,
 				2D42710620EFBBEB00FE3429 /* keyboard_magnifier@3x.png */,
-				2D42710720EFBBEB00FE3429 /* newdelete_a@2x.png */,
-				2D42710820EFBBEB00FE3429 /* newdelete_a@3x.png */,
-				2D42710920EFBBEB00FE3429 /* newdelete_b@2x.png */,
-				2D42710A20EFBBEB00FE3429 /* newdelete_b@3x.png */,
-				2D42710B20EFBBEB00FE3429 /* up_a@2x.png */,
-				2D42710C20EFBBEB00FE3429 /* up_a@3x.png */,
-				2D42710D20EFBBEB00FE3429 /* up_b@2x.png */,
-				2D42710E20EFBBEB00FE3429 /* up_b@3x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -872,28 +842,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB65FBD2086F6D6009FADCE /* setting - 副本.html in Resources */,
-				2D42711220EFBBEB00FE3429 /* newdelete_a@3x.png in Resources */,
-				2D42711420EFBBEB00FE3429 /* newdelete_b@3x.png in Resources */,
 				2D42711020EFBBEB00FE3429 /* keyboard_magnifier@3x.png in Resources */,
 				2D42712020F33DBB00FE3429 /* capitalSelect@3x.png in Resources */,
-				2D42711520EFBBEB00FE3429 /* up_a@2x.png in Resources */,
-				2D42711720EFBBEB00FE3429 /* up_b@2x.png in Resources */,
 				2D42712720F33F3500FE3429 /* keyNewDelete@2x.png in Resources */,
 				2D42711B20F33D6300FE3429 /* capitalNormal@3x.png in Resources */,
 				2D2F20CC1FEB9FE200EA46D5 /* SDPhotoBrowserd.podspec in Resources */,
-				2D42712320F33EEF00FE3429 /* keyDelete@2x.png in Resources */,
 				2DF582401FD7D0BD00E0A5D7 /* LaunchScreen.storyboard in Resources */,
 				2DF5823D1FD7D0BD00E0A5D7 /* Assets.xcassets in Resources */,
-				2D42712420F33EEF00FE3429 /* keyDelete@3x.png in Resources */,
-				2D42711120EFBBEB00FE3429 /* newdelete_a@2x.png in Resources */,
-				2D42711320EFBBEB00FE3429 /* newdelete_b@2x.png in Resources */,
 				2D2F20C81FEB9FE200EA46D5 /* LICENSE in Resources */,
 				2D42710F20EFBBEB00FE3429 /* keyboard_magnifier@2x.png in Resources */,
 				2D42711C20F33D6300FE3429 /* capitalNormal@2x.png in Resources */,
-				2D42711620EFBBEB00FE3429 /* up_a@3x.png in Resources */,
 				2D42711F20F33DBB00FE3429 /* capitalSelect@2x.png in Resources */,
 				2DF5823B1FD7D0BD00E0A5D7 /* Main.storyboard in Resources */,
-				2D42711820EFBBEB00FE3429 /* up_b@3x.png in Resources */,
 				2D42712820F33F3500FE3429 /* keyNewDelete@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,7 +46,7 @@ class ZMCollectionViewCell: UICollectionViewCell {
         let object = UIButton()
         //设置相关属性
         object.setTitleColor(UIColor.darkGray, for: .normal)
-        object.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        object.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 23)
         object.backgroundColor = UIColor.white
         
         //设置圆角
