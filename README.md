@@ -10,3 +10,6 @@ swift工程，持续更新中
 
 #swift4.0头像物理引擎动画
 ![image](https://github.com/niuxinhuai/swiftlyProject/blob/master/Untitled1.gif) 
+
+#keyboard
+![image](https://github.com/niuxinhuai/swiftlyProject/blob/master/keyboard.gif) 
