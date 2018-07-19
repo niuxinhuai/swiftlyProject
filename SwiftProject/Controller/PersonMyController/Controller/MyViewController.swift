@@ -10,20 +10,25 @@ import UIKit
 class MyViewController: BaseViewController {
     var data:Array = PersonModel.data
     var imgNamedArray: Array = PersonModel.imgNamedArray
+    let feedbackKit = BCFeedbackKit.init(appKey: "24970974", appSecret: "683ee4b0aa7482de6187def4dbecd1c1")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(self.mainScroll)
-        
-        var array = [1,2,3,4,5]
-        var min = [1,2]
-        
-        array.remove(at: 0)
-        array.remove(at: 0)
-        array.append(min[0])
-        array.append(min[1])
-        print(array)
-        
-        
+    }
+    
+    @objc func openBCFeedback() {
+        feedbackKit?.makeFeedbackViewController(completionBlock: {[weak self] (viewController, error) in
+            if viewController != nil {
+                let nav = UINavigationController.init(rootViewController: viewController!)
+                self?.present(nav, animated: true, completion: nil)
+                viewController?.closeBlock = {(vc) in
+                    vc?.dismiss(animated: true, completion: nil)
+                }
+            } else {
+                
+            }
+        })
     }
     
     override func configNavgationItem() {
@@ -63,7 +68,6 @@ class MyViewController: BaseViewController {
         mainTable.delegate = self;
         mainTable.dataSource = self;
         //mainTable.separatorStyle = .none
-        mainTable.backgroundColor = UIColor.red
         mainTable.register(PersonUserTableViewCell.classForCoder(),
                            forCellReuseIdentifier: "userCell")
         mainTable.register(PersonMyTableViewCell.classForCoder(),
@@ -151,7 +155,11 @@ extension MyViewController: UITableViewDelegate,UITableViewDataSource, UIGesture
 //            self.present(vc, animated: true, completion: nil)
 //
 //        }
-        
+        if indexPath.section == 2 {
+            if indexPath.row == 6 {
+                openBCFeedback()
+            }
+        }
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

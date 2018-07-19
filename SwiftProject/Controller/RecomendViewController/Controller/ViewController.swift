@@ -16,10 +16,6 @@ import SwiftyJSON
         override func viewDidLoad() {
             super.viewDidLoad()
             self.loadData()
-            
-            print("当前返回的值是\(PersonModel.CanOpenQQ)")
-            
-            
         }
         
         override func configNavgationItem() {
@@ -110,7 +106,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = dataSource[indexPath.row]
-        
         if model.type == "article" {
             let url = model.id
             let vc = ArticleDetialViewController.init(url: url)

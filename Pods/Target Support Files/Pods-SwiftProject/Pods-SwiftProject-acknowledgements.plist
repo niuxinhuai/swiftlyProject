@@ -43,6 +43,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Alibaba-INC copyright</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>AlicloudFeedback</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>MIT License
 
 Copyright (c) 2017 RxSwift Community

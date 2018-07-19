@@ -1,9 +1,14 @@
+
+
 platform :ios, '8.0'
 
 use_frameworks!
 
 target 'SwiftProject' do
 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+pod 'AlicloudFeedback'
 pod 'SnapKit'
 pod 'Alamofire', '~> 4.5'
 pod 'SwiftyJSON'

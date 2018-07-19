@@ -14,13 +14,15 @@ class PersonModel: NSObject {
                 "我的粉丝",
                 "我的合集",
                 "我的订阅",
-                "我的消息"]
+                "我的消息",
+                "意见反馈"]
     static var imgNamedArray = ["personal_dynamic",
                          "personal_attention",
                          "personal_fensi",
                          "personal_compilations",
                          "personal_subscription",
-                         "personal_message"]
+                         "personal_message",
+                         "personal_attention"]
     
     class var CanOpenQQ: Bool {
         

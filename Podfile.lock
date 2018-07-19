@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (4.5.1)
+  - AlicloudFeedback (3.3.3):
+    - AlicloudUT
+    - AlicloudUtils
+  - AlicloudUT (5.2.0.5):
+    - AlicloudUTDID
+  - AlicloudUTDID (1.1.0.19)
+  - AlicloudUtils (1.3.5):
+    - AlicloudUTDID
   - Differentiator (3.0.2)
   - MJRefresh (3.1.14)
   - RxCocoa (4.0.0):
@@ -17,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - AlicloudFeedback
   - MJRefresh
   - RxCocoa (~> 4.0)
   - RxDataSources
@@ -26,7 +35,12 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/aliyun/aliyun-specs.git:
+    - AlicloudFeedback
+    - AlicloudUT
+    - AlicloudUTDID
+    - AlicloudUtils
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
     - MJRefresh
@@ -39,6 +53,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlicloudFeedback: bbc87b67b0ead5ca28a75bdd59468a64218eb7fe
+  AlicloudUT: 1b52965b97c5fc0b630901ce184391fbe1ef8479
+  AlicloudUTDID: 14b582e41b39bc66e5a3420b61dafd0567ef4603
+  AlicloudUtils: 36bd836fdd5c040ee0c9c06b0e1e1096a8c59c44
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
@@ -48,6 +66,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 6e079dbced5661d7baad6a5c0df0d666ce8e79e6
+PODFILE CHECKSUM: 02e8009f142925573960e6ce45a0eeef54ac78c0
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

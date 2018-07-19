@@ -19,6 +19,7 @@
 		2D19C3B020EF5C6500882574 /* ZMKeyBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19C3AF20EF5C6500882574 /* ZMKeyBoardView.swift */; };
 		2D19C3B320EF5ED000882574 /* ZMCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19C3B220EF5ED000882574 /* ZMCollectionLayout.swift */; };
 		2D19C3B620EF604100882574 /* ZMKeyBoardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19C3B520EF604100882574 /* ZMKeyBoardUtil.swift */; };
+		2D205DA020F8A31500A2B4F8 /* ALBCUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D205D9F20F8A31500A2B4F8 /* ALBCUtil.swift */; };
 		2D2F1FF01FE24E3F00EA46D5 /* NXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */; };
 		2D2F1FF11FE24E3F00EA46D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */; };
 		2D2F1FF21FE24E3F00EA46D5 /* SignTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */; };
@@ -116,6 +117,7 @@
 		2D19C3AF20EF5C6500882574 /* ZMKeyBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMKeyBoardView.swift; sourceTree = "<group>"; };
 		2D19C3B220EF5ED000882574 /* ZMCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMCollectionLayout.swift; sourceTree = "<group>"; };
 		2D19C3B520EF604100882574 /* ZMKeyBoardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMKeyBoardUtil.swift; sourceTree = "<group>"; };
+		2D205D9F20F8A31500A2B4F8 /* ALBCUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALBCUtil.swift; sourceTree = "<group>"; };
 		2D2F1FE71FE24E3F00EA46D5 /* NXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NXNavigationController.swift; sourceTree = "<group>"; };
 		2D2F1FE91FE24E3F00EA46D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2F1FEB1FE24E3F00EA46D5 /* SignTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTabbar.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				2D2F20971FE8AB0200EA46D5 /* ReadModel.swift */,
+				2D205D9F20F8A31500A2B4F8 /* ALBCUtil.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				2DF5822F1FD7D0BD00E0A5D7 /* Frameworks */,
 				2DF582301FD7D0BD00E0A5D7 /* Resources */,
 				5864DA782E6A143DAF48000F /* [CP] Embed Pods Frameworks */,
+				DC124F988B125E44AAA2F91F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -927,6 +931,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC124F988B125E44AAA2F91F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh",
+				"${PODS_ROOT}/AlicloudFeedback/feedback/YWFeedbackBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YWFeedbackBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -967,6 +989,7 @@
 				2D2F20FF1FEBA2E400EA46D5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				2D2F20A21FE8F3AD00EA46D5 /* UIImageExtensions.swift in Sources */,
 				2D2F1FF91FE24F3600EA46D5 /* ViewController.swift in Sources */,
+				2D205DA020F8A31500A2B4F8 /* ALBCUtil.swift in Sources */,
 				2D7CE0B620EF684600F69D10 /* KeyBoardTipImageView.swift in Sources */,
 				2D2F21081FECB02300EA46D5 /* PersonMyTableViewCell.swift in Sources */,
 				2D03838B1FF0D94400B61901 /* LoginViewController.swift in Sources */,
@@ -1170,7 +1193,7 @@
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.niuxinhuai.text.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwordnet.Durian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
@@ -1192,7 +1215,7 @@
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.niuxinhuai.text.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwordnet.Durian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/SwiftProject-Bridging-Header.h";
