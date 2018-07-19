@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import CoreSpotlight
 struct items {
     
     var source: String?
@@ -49,4 +50,27 @@ struct ResponseData: Codable {
     var data: ReturnData
     
 
+}
+
+class SpotlightUtil: NSObject {
+    @available(iOS 9.0, *)
+    func getSpotlight() {
+        let firstSet = CSSearchableItemAttributeSet.init(itemContentType: "firstSet")
+        firstSet.title = "中国"
+        firstSet.contentDescription = "台湾是中国的固有领土"
+        firstSet.contactKeywords = ["first","中国","台湾"]
+        firstSet.thumbnailData = UIImageJPEGRepresentation(UIImage.init(named: "m8.jpg")!, 1)
+        
+        let firstItem = CSSearchableItem.init(uniqueIdentifier: "firstItem", domainIdentifier: "first", attributeSet: firstSet)
+        CSSearchableIndex.default().indexSearchableItems([firstItem]) { (error) in
+            if error != nil {
+                print("spotlight错误提示\(error)")
+            }else {
+                print("spotlight验证成功")
+            }
+        }
+        
+    }
+    
+    
 }

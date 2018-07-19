@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = SignTabBarController()
         window?.makeKeyAndVisible()
         UMSocialModel.registerUM()
+        if #available(iOS 9.0, *) {
+            SpotlightUtil().getSpotlight()
+        } else {
+            // Fallback on earlier versions
+        }
         // Override point for customization after application launch.
         return true
     }
